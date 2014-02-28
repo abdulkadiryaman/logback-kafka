@@ -29,7 +29,7 @@ a zookeeper host string, and kafka topic name to log to.
 <?xml version="1.0" encoding="UTF-8" ?>
 <configuration>
     <appender name="KAFKA"
-        class="org.clojars.brenden.logback.KafkaAppender">
+        class="KafkaAppender">
         <topic>mytopic</topic>
         <zookeeperHost>localhost:2181</zookeeperHost>
     </appender>
@@ -47,11 +47,11 @@ behavior by specifying a custom formatter class:
 <?xml version="1.0" encoding="UTF-8" ?>
 <configuration>
     <appender name="KAFKA"
-        class="org.clojars.brenden.logback.KafkaAppender">
+        class="KafkaAppender">
         <topic>foo</topic>
         <zookeeperHost>localhost:2181</zookeeperHost>
         <!-- specify a custom formatter -->
-        <formatter class="org.clojars.brenden.logback.KafkaAppender">
+        <formatter class="KafkaAppender">
             <!-- 
             Whether we expect the log message to be JSON encoded or not.
             If set to "false", the log message will be treated as a string, 
@@ -69,7 +69,7 @@ behavior by specifying a custom formatter class:
 
 
 
-Formatters simply need to implement the `org.clojars.brenden.logback.formatter.Formatter` interface:
+Formatters simply need to implement the `Formatter` interface:
 
 ```java
 package org.clojars.brenden.logback.formatter;
