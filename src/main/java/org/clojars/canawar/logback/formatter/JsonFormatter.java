@@ -1,4 +1,4 @@
-package org.clojars.brenden.logback.formatter;
+package org.clojars.canawar.logback.formatter;
 
 import java.net.InetAddress;
 import java.net.UnknownHostException;

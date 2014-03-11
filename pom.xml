@@ -1,9 +1,9 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>org.clojars.brenden</groupId>
+  <groupId>org.clojars.canawar</groupId>
   <artifactId>logback-kafka</artifactId>
-  <version>0.2.9</version>
+  <version>0.2.11</version>
   <packaging>jar</packaging>
 
   <name>logback-kafka</name>
