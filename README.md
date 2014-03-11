@@ -13,7 +13,7 @@ To use logback-kafka in your project add to following to your pom.xml:
 </repository>
 ...
 <dependency>
-  <groupId>org.clojars.brenden</groupId>
+  <groupId>org.clojars.canawar</groupId>
   <artifactId>logback-kafka</artifactId>
   <version>0.2.7</version>
 </dependency>
@@ -29,7 +29,7 @@ a zookeeper host string, and kafka topic name to log to.
 <?xml version="1.0" encoding="UTF-8" ?>
 <configuration>
     <appender name="KAFKA"
-        class="org.clojars.brenden.logback.KafkaAppender">
+        class="org.clojars.canawar.logback.KafkaAppender">
         <topic>mytopic</topic>
         <zookeeperHost>localhost:2181</zookeeperHost>
     </appender>
@@ -47,11 +47,11 @@ behavior by specifying a custom formatter class:
 <?xml version="1.0" encoding="UTF-8" ?>
 <configuration>
     <appender name="KAFKA"
-        class="org.clojars.brenden.logback.KafkaAppender">
+        class="org.clojars.canawar.logback.KafkaAppender">
         <topic>foo</topic>
         <zookeeperHost>localhost:2181</zookeeperHost>
         <!-- specify a custom formatter -->
-        <formatter class="org.clojars.brenden.logback.KafkaAppender">
+        <formatter class="org.clojars.canawar.logback.KafkaAppender">
             <!-- 
             Whether we expect the log message to be JSON encoded or not.
             If set to "false", the log message will be treated as a string, 
@@ -69,10 +69,10 @@ behavior by specifying a custom formatter class:
 
 
 
-Formatters simply need to implement the `org.clojars.brenden.logback.formatter.Formatter` interface:
+Formatters simply need to implement the `org.clojars.canawar.logback.formatter.Formatter` interface:
 
 ```java
-package org.clojars.brenden.logback.formatter;
+package org.clojars.canawar.logback.formatter;
 
 import ch.qos.logback.classic.spi.ILoggingEvent;
 
