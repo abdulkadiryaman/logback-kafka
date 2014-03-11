@@ -15,7 +15,7 @@ To use logback-kafka in your project add to following to your pom.xml:
 <dependency>
   <groupId>org.clojars.canawar</groupId>
   <artifactId>logback-kafka</artifactId>
-  <version>0.2.7</version>
+  <version>0.2.11</version>
 </dependency>
 ```
 
