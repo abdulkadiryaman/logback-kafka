@@ -81,7 +81,6 @@ public class KafkaAppender extends AppenderBase<ILoggingEvent> {
     @Override
     protected void append(ILoggingEvent event) {
         String payload = this.formatter.format(event);
-        System.out.println("Payload : " + payload);
         KeyedMessage<String, String> data = new KeyedMessage<>(this.topic, payload);
         this.producer.send(data);
     }
