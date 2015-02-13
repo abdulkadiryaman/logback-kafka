@@ -50,16 +50,9 @@ behavior by specifying a custom formatter class:
         class="org.clojars.canawar.logback.KafkaAppender">
         <topic>foo</topic>
         <zookeeperHost>localhost:2181</zookeeperHost>
-        <!-- specify a custom formatter -->
-        <formatter class="org.clojars.canawar.logback.KafkaAppender">
-            <!-- 
-            Whether we expect the log message to be JSON encoded or not.
-            If set to "false", the log message will be treated as a string, 
-            and wrapped in quotes. Otherwise it will be treated as a parseable
-            JSON object.
-            -->
-            <expectJson>true</expectJson>
-        </formatter>
+        <brokerList>localhost:9092</brokerList>
+        <!-- specify a custom formatter, JsonFormatter turns regular logs into JSON objects -->
+        <formatter class="org.clojars.canawar.logback.formatter.JsonFormatter"></formatter>
     </appender>
     <root level="debug">
         <appender-ref ref="KAFKA" />
